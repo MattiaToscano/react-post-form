@@ -19,6 +19,22 @@ function App() {
     public: false
   }
 
+  //Variabile di stato corrispondente ad un oggetto
+  const [formPost, setFormPost] = useState(initialFormPost);
+
+  //Funzione per l'OnChange dei singoli campi
+  function handleFormPost(event) {
+
+    const checkboxValue = event.target.type === 'checkbox' ? event.target.checked : event.target.value;
+
+    setFormPost(formPost => ({
+      ...formPost,
+      [event.target.name]: event.target.value
+    }))
+  }
+
+
+
 
   return (
     <>
