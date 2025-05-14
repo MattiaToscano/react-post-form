@@ -90,6 +90,11 @@ function App() {
               onChange={handleFormPost}
             />
           </div>
+
+          <hr />
+
+          <button> Crea post </button>
+
         </form>
       </div>
     </>
