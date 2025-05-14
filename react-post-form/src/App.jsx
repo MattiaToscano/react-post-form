@@ -29,8 +29,29 @@ function App() {
 
     setFormPost(formPost => ({
       ...formPost,
-      [event.target.name]: event.target.value
+      [event.target.name]: checkboxValue
     }))
+  }
+
+  //Funzione per creare nuovo post tramite chiamata API
+  function createPost(event) {
+
+    event.preventDefault();
+
+    //chiamata tramite axios all'endpoint fornito e variabile useState che verrà aggiornata
+    axios.post(endpoint, formPost)
+      .then(response => {
+        console.log(response.data)
+
+        //Bonus che non era da fare(Avvisare il cliente che l'operazione è andata a buon fine)
+        alert('La creazione del post è andata a buon fine!');
+
+        setFormPost(initialFormPost);
+      })
+      .catch(error => {
+        //Bonus che non era da fare(Avvisare il cliente che l'operazione non è andata a buon fine)
+        alert('Si è verificato un problema durante la compilazione!')
+      })
   }
 
 
