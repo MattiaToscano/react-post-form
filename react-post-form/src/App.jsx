@@ -43,28 +43,52 @@ function App() {
         <form>
           <div>
             <label>Autore del post</label>
-            <input></input>
+            <input
+              type="text"
+              id="author-element"
+              name="author"
+              value={formPost.author}
+              onChange={handleFormPost}
+              placeholder="Nome dell'autore" />
           </div>
 
           <hr />
 
           <div>
             <label>Titolo del post</label>
-            <input></input>
+            <input
+              type="text"
+              id="title-element"
+              name="title"
+              value={formPost.title}
+              onChange={handleFormPost}
+              placeholder="Titolo del post" />
           </div>
 
           <hr />
 
           <div>
             <label>Contenuto del post</label>
-            <input></input>
+            <input
+              type="text"
+              id="body-element"
+              name="body"
+              value={formPost.body}
+              onChange={handleFormPost}
+              placeholder="Contenuto del post" />
           </div>
 
           <hr />
 
           <div>
             <label>Post pubblico?</label>
-            <input></input>
+            <input
+              type="checkbox"
+              id="public-element"
+              name="public"
+              checked={formPost.public}
+              onChange={handleFormPost}
+            />
           </div>
         </form>
       </div>
