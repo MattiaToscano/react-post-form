@@ -1,7 +1,7 @@
 // Hook
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 //Importiamo Axios
-import { axios } from 'axios';
+import axios from 'axios';
 //Importo Bootstrap
 import "bootstrap/dist/css/bootstrap.min.css"
 
@@ -23,8 +23,34 @@ function App() {
   return (
     <>
       <div>
+        <h1> React Post Form</h1>
+        <form>
+          <div>
+            <label>Autore del post</label>
+            <input></input>
+          </div>
 
+          <hr />
 
+          <div>
+            <label>Titolo del post</label>
+            <input></input>
+          </div>
+
+          <hr />
+
+          <div>
+            <label>Contenuto del post</label>
+            <input></input>
+          </div>
+
+          <hr />
+
+          <div>
+            <label>Post pubblico?</label>
+            <input></input>
+          </div>
+        </form>
       </div>
     </>
   )
