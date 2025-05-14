@@ -56,12 +56,11 @@ function App() {
 
 
 
-
   return (
     <>
       <div>
         <h1> React Post Form</h1>
-        <form>
+        <form onSubmit={createPost}>
           <div>
             <label>Autore del post</label>
             <input
